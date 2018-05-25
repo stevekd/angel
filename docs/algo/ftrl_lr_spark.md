@@ -81,7 +81,7 @@ FTRL_VRG的分布式实现框架图如下：
 	 * group:kafka的group信息
 	 * receiverNum:kafka receiver的个数
 	 * streamingWindow：控制spark streaming流中每批数据的持续时间
-	 * modelPath：训练时模型的保存路
+	 * modelPath：训练时模型的保存路径
 	 * logPath:每个batch的平均loss输出路径
 	 * partitionNum：streaming中的分区数
 	 * optMethod:选择采用ftrl还是ftrlVRG进行优化
@@ -120,7 +120,7 @@ FTRL_VRG的分布式实现框架图如下：
     --executor-cores 2 \
     --executor-memory 12g \
     --class com.tencent.angel.spark.ml.online_learning.FTRLRunner \
-    spark-on-angel-mllib-2.2.0.jar \
+    spark-on-angel-mllib-1.5.1.jar \
     partitionNum:10 \
     modelPath:$modelPath \
     checkPointPath:$checkPointPath \
@@ -203,7 +203,7 @@ FTRL_VRG的分布式实现框架图如下：
     --executor-cores 2 \
     --executor-memory 12g \
     --class com.tencent.angel.spark.ml.online_learning.FTRLRunner \
-    spark-on-angel-mllib-2.2.0.jar \
+    spark-on-angel-mllib-1.5.1.jar \
     input:$input
     partitionNum:10 \
     modelPath:$modelPath \
